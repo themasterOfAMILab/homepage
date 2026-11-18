@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="GitHub Pages와 Supabase를 연결한 회원 페이지">
+  <title>AMI Lab 회원 페이지</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="hero">
+      <p class="eyebrow">AMI LAB · MEMBER SPACE</p>
+      <h1>회원가입과 로그인</h1>
+      <p>GitHub Pages의 화면과 Supabase Auth·Database를 연결한 실습 페이지입니다.</p>
+    </header>
+    <p id="status" class="status" role="status" aria-live="polite">Supabase 연결을 확인하고 있습니다.</p>
+    <section id="guest-panel" class="panel" aria-labelledby="auth-title">
+      <div class="panel-heading">
+        <div><p class="step">STEP 01</p><h2 id="auth-title">계정으로 시작하기</h2></div>
+        <span class="badge">Supabase Auth</span>
+      </div>
+      <form id="auth-form">
+        <label for="display-name">표시 이름</label>
+        <input id="display-name" autocomplete="name" maxlength="30" placeholder="홍길동">
+        <label for="email">전자우편</label>
+        <input id="email" type="email" autocomplete="email" placeholder="name@example.com" required>
+        <label for="password">비밀번호</label>
+        <input id="password" type="password" autocomplete="current-password" minlength="8" required>
+        <p class="hint">8자 이상 입력합니다. 회원가입 후 확인 메일의 링크를 눌러야 로그인할 수 있습니다.</p>
+        <div class="actions">
+          <button id="signup" class="button secondary" type="button">회원가입</button>
+          <button class="button primary" type="submit">로그인</button>
+        </div>
+      </form>
+    </section>
+    <section id="member-panel" class="panel" aria-labelledby="profile-title" hidden>
+      <div class="panel-heading">
+        <div><p class="step">STEP 02</p><h2 id="profile-title">내 프로필</h2></div>
+        <span class="badge success">로그인됨</span>
+      </div>
+      <p id="member-email" class="member-email"></p>
+      <form id="profile-form">
+        <label for="profile-name">표시 이름</label>
+        <input id="profile-name" maxlength="30" required>
+        <label for="introduction">자기소개</label>
+        <textarea id="introduction" rows="5" maxlength="300" placeholder="나를 소개하는 문장을 입력하세요."></textarea>
+        <div class="actions">
+          <button class="button primary" type="submit">프로필 저장</button>
+          <button id="logout" class="button ghost" type="button">로그아웃</button>
+        </div>
+      </form>
+    </section>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
