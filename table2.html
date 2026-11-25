@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>표 만들기 2</title>
+  </head>
+  <body>
+    <h1>표 만들기 2</h1>
+    <table border="1">
+      <tr>
+        <th>숫자1</th>
+        <th>숫자2</th>
+        <th>숫자3</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>8</td>
+        <td>9</td>
+      </tr>
+    </table>
+    <hr />
+    <h2>병합된 셀 예제</h2>
+    <table border="1">
+      <tr align="center">
+        <th>숫자1</th>
+        <th>숫자2</th>
+        <th>숫자3</th>
+      </tr>
+      <tr align="center">
+        <td>1</td>
+        <td rowspan="2" style="color: rgb(237, 82, 15)">2</td>
+        <td>3</td>
+      </tr>
+      <tr align="center">
+        <td>4</td>
+        <!-- <td>5</td> -->
+        <td>6</td>
+      </tr>
+      <tr align="center">
+        <td>7</td>
+        <td colspan="2" style="color: blueviolet">8</td>
+        <!-- <td>9</td> -->
+      </tr>
+    </table>
+  </body>
+</html>
